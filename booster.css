@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', sans-serif;
+    background-image: url('ville-dragon.png'); /* Image de fond */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease, color 0.5s ease; /* Transition pour le fond et le texte */
+    background-attachment: fixed; /* Fixe l'image lors du défilement */
+    color: #ffffff; /* Texte blanc */
+}
+
+body.active {
+    background-image: url('darkmode.png'); /* Image de fond lorsqu'activé */
+    color: #111; /* Couleur du texte lorsqu'activé */
+}
+
+body.active button {
+    background-color: #111;
+    color: #ffffff;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #555555; /* Gris foncé */
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    margin-left: 270px;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+aside {
+    position: fixed; /* Rend la colonne fixe */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 250px; /* Largeur de la colonne */
+    height: 100vh; /* Prend toute la hauteur de la page */
+    background-color: #777777; /* Gris */
+    padding-top: 100px;
+}
+
+aside button {
+    font-family: 'Cinzel', serif; /* Police fantasy */
+    font-size: 15px;
+    display: block;
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #999999; /* Gris clair */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transition pour adoucir l'animation */
+}
+
+aside button:hover {
+    background-color: #666666; /* Gris plus foncé */
+}
+
+
+#boosterFront {
+    margin-bottom: 50px;
+}
+
+
+/* Card styling */
+.card {
+    width: 300px;
+    height: 400px;
+    border: 2px solid #333;
+    margin: 2px;
+    display: inline-block;
+    background-size: cover;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#cardPile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    scale: 0.8;
+}
+
+/* Buttons styling */
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#nextBoosterButton {
+    background-color: #28a745;
+}
+
+#nextBoosterButton.hidden {
+    display: none;
+}
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booster Pack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="booster.css">
+</head>
+<body>
+    <header>
+        <h1>Ouvre ton Booster!</h1>
+    </header>
+    <aside>
+        <!-- Buttons -->
+        <button onclick="window.location.href='https://view.genially.com/671d5339acd5536c1fd5bf1b/presentation-album-dragon'">Album</button>
+        <button id="toggleButton">Darkmode</button>
+        <button id="backToMainPage" onclick="window.location.href='index.html'">Retour à l'accueil</button>
+        <button id="revealCardButton">Découvrir la première carte</button>
+        <button id="nextBoosterButton" class="hidden">Booster suivant</button>
+    </aside>
+    
+    <div id="boosterContainer">
+        
+        <!-- Front image of the booster -->
+        <div id="boosterFront">
+            <img src="booster.jpg" alt="Booster Image" id="boosterImage">
+        </div>
+
+<!-- Contenu principal -->
+    <main>    
+        <!-- Card pile -->
+        <div id="cardPile">
+            <div class="card" id="card1"></div>
+            <div class="card" id="card2"></div>
+            <div class="card" id="card3"></div>
+            <div class="card" id="card4"></div>
+            <div class="card" id="card5"></div>
+            <div class="card" id="card6"></div>
+        </div>
+    </main>
+
+    <script src="booster.js"></script>
+</body>
+</html>

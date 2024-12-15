@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5deb3; /* Beige clair */
+    color: #000000; /* Texte en noir */
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Cinzel', serif; /* Police fantasy */
+    font-size: 36px;
+    text-align: center;
+    background-color: #8b4513; /* Marron foncé */
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-button button {
+    font-family: 'Cinzel', serif; /* Police fantasy */
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #8b4513; /* Marron foncé */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button button:hover {
+    background-color: #a0522d; /* Marron plus clair au survol */
+}
+
+/* Responsivité pour les tablettes */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 30px;
+    }
+}
+
+/* Responsivité pour les téléphones */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .back-button button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}

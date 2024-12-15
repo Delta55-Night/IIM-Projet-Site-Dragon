@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', sans-serif;
+    background-image: url('ville-dragon.png'); /* Image de fond */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease, color 0.5s ease; /* Transition pour le fond et le texte */
+    background-attachment: fixed; /* Fixe l'image lors du défilement */
+    color: #ffffff; /* Texte blanc */
+}
+
+body.active {
+    background-image: url('darkmode.png'); /* Image de fond lorsqu'activé */
+    color: #111; /* Couleur du texte lorsqu'activé */
+}
+
+body.active button {
+    background-color: #111;
+    color: #ffffff;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #555555; /* Gris foncé */
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+main {
+    margin-left: 270px;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+aside {
+    position: fixed; /* Rend la colonne fixe */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 250px; /* Largeur de la colonne */
+    height: 100vh; /* Prend toute la hauteur de la page */
+    background-color: #777777; /* Gris */
+    padding-top: 100px;
+}
+
+aside button {
+    font-family: 'Cinzel', serif; /* Police fantasy */
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #999999; /* Gris clair */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transition pour adoucir l'animation */
+}
+
+aside button:hover {
+    background-color: #666666; /* Gris plus foncé */
+}
+
+.card-family {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center; /* Centrage horizontal des cartes */
+    padding: 10px; /* Ajoute de l'espace autour */
+}
+
+
+
+.card-small {
+    width: 225px; /* Largeur des cartes */
+    height: 400px; /* Conserve le ratio d'aspect */
+    border: 2px solid #333333; /* Bordure sombre */
+    border-radius: 8px; /* Coins arrondis */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.card-small:hover {
+    transform: scale(1.1); /* Zoom au survol */
+}
+
+#filters {
+    margin-bottom: 20px;
+}
+
+#filters select {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #555555;
+    color: #ffffff;
+    border: 1px solid #333333;
+}
+
+#filters button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #888888;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition pour adoucir l'animation */
+}
+
+#filters button:hover {
+    background-color: #777777;
+}
+
+
+/* Responsivité pour les tablettes */
+@media screen and (max-width: 1024px) {
+    main {
+        margin-left: 220px;
+    }
+
+    aside {
+        width: 200px;
+    }
+}
+
+/* Responsivité pour les téléphones */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    main {
+        margin-left: 0;
+        padding-top: 80px;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        position: left;
+        padding-top: 10px;
+    }
+
+    aside button {
+        font-size: 16px;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .card-collection {
+        grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne sur mobile */
+    }
+
+    .card-family img {
+        width: 120px;
+        height: 160px;
+    }
+}
+

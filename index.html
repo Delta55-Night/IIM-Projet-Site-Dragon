@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Legends: The Ultimate Card Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"></head>
+<body>
+    <header>
+        <h1>Dragon Legends: The Ultimate Card Collection</h1>
+    </header>
+
+    <!-- Barre de navigation -->
+    
+    <aside>
+        <a href="formulaire.html"><button>Inscris-toi dragonnier</button></a>
+        <button onclick="window.location.href='histoire-du-jeu.pdf'">Histoire</button>
+        <a href="rules.html"><button>Règles du jeu</button></a>
+        <button onclick="window.location.href='https://view.genially.com/671d5339acd5536c1fd5bf1b/presentation-album-dragon'">Album</button>
+        <a href="booster.html"><button>Boosters</button></a> <!-- Lien vers la page des boosters -->
+        <button id="toggleButton">Darkmode</button>
+        <button onclick="toggleSection('filters')">Filtres</button>
+
+        <!-- Section des Filtres -->
+        <div id="filters"> 
+            <div id="filterOptions" class="hidden"></div>
+                <select id="familyFilter">
+                    <option value="all">Toutes les familles</option>
+                    <option value="nature">Nature</option>
+                    <option value="feu">Feu</option>
+                    <option value="glace">Glace</option>
+                    <option value="spectre">Spectre</option>
+                    <option value="esprit">Esprit</option>
+                    <option value="ombre">Ombre</option>
+                    <option value="gold">Gold</option>
+                    <option value="secrete">Secrète</option>
+                    <option value="futur">Futur</option>
+                    <option value="foudre">Foudre divine</option>
+                    <option value="sun">Soleil</option>
+                    <option value="seasons">Les 4 saisons</option>
+                    <option value="chaos">Chaos</option>
+                    <option value="brume">Brume</option>
+                    <option value="lieu">Lieux</option>
+
+                </select>
+                <select id="rarityFilter">
+                    <option value="all">Toutes les raretés</option>
+                    <option value="commun">Commun</option>
+                    <option value="atypique">Atypique</option>
+                    <option value="rare">Rare</option>
+                    <option value="epique">Épique</option>
+                    <option value="legendaire">Légendaire</option>
+                    <option value="mythique">Mythique</option>
+                    <option value="secret">Celeste</option>
+                    <option value="temps">Temps</option>
+                    <option value="divin">Divin</option>
+                 <option value="cycle">Cycle</option>
+                    <option value="eternel">Eternel</option>
+                    <option value="surnaturel">Surnaturel</option>
+                    <option value="apocalyptique">Apocalyptique</option>
+                    <option value="univers">Univers</option>
+                </select>
+            </div>
+            <button id="applyFilters">Appliquer</button>
+        </div>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section de l'Album (par défaut visible) -->
+        <section id="card-collection">
+            <div id="card-family">
+                <img src="card1.jpg" alt="Card 1" class="card-small"  data-family="nature" data-rarity="commun">
+                <img src="card2.jpg" alt="Card 2" class="card-small" data-family="nature" data-rarity="atypique">
+                <img src="card3.jpg" alt="Card 3" class="card-small" data-family="nature" data-rarity="rare">
+                <img src="card4.jpg" alt="Card 4" class="card-small" data-family="nature" data-rarity="epique">
+                <img src="card5.jpg" alt="Card 5" class="card-small" data-family="feu" data-rarity="commun">
+                <img src="card6.jpg" alt="Card 6" class="card-small" data-family="feu" data-rarity="atypique">
+                <img src="card7.jpg" alt="Card 7" class="card-small" data-family="feu" data-rarity="rare">
+                <img src="card8.jpg" alt="Card 8" class="card-small" data-family="feu" data-rarity="epique">
+                <img src="card9.jpg" alt="Card 9" class="card-small" data-family="glace" data-rarity="commun">
+                <img src="card10.jpg" alt="Card 10" class="card-small" data-family="glace" data-rarity="atypique">
+                <img src="card11.jpg" alt="Card 11" class="card-small" data-family="glace" data-rarity="rare">
+                <img src="card12.jpg" alt="Card 12" class="card-small" data-family="glace" data-rarity="epique">
+                <img src="card13.jpg" alt="Card 13" class="card-small" data-family="spectre" data-rarity="commun">
+                <img src="card14.jpg" alt="Card 14" class="card-small" data-family="spectre" data-rarity="atypique">
+                <img src="card15.jpg" alt="Card 15" class="card-small" data-family="spectre" data-rarity="rare">
+                <img src="card16.jpg" alt="Card 16" class="card-small" data-family="spectre" data-rarity="epique">
+                <img src="card17.jpg" alt="Card 17" class="card-small" data-family="esprit" data-rarity="commun">
+                <img src="card18.jpg" alt="Card 18" class="card-small" data-family="esprit" data-rarity="atypique">
+                <img src="card19.jpg" alt="Card 19" class="card-small" data-family="esprit" data-rarity="rare">
+                <img src="card20.jpg" alt="Card 20" class="card-small" data-family="esprit" data-rarity="epique">
+                <img src="card21.jpg" alt="Card 21" class="card-small" data-family="ombre" data-rarity="commun">
+                <img src="card22.jpg" alt="Card 22" class="card-small" data-family="ombre" data-rarity="atypique">
+                <img src="card23.jpg" alt="Card 23" class="card-small" data-family="ombre" data-rarity="rare">
+                <img src="card24.jpg" alt="Card 24" class="card-small" data-family="ombre" data-rarity="epique">
+                <img src="card25.jpg" alt="Card 25" class="card-small" data-family="gold" data-rarity="commun">
+                <img src="card26.jpg" alt="Card 26" class="card-small" data-family="gold" data-rarity="atypique">
+                <img src="card27.jpg" alt="Card 27" class="card-small" data-family="gold" data-rarity="rare">
+                <img src="card28.jpg" alt="Card 28" class="card-small" data-family="gold" data-rarity="epique">
+                <img src="card29.jpg" alt="Card 29" class="card-small" data-family="divin" data-rarity="legendaire">
+                <img src="card30.jpg" alt="Card 30" class="card-small" data-family="divin" data-rarity="legendaire">
+                <img src="card31.jpg" alt="Card 31" class="card-small" data-family="divin" data-rarity="legendaire">
+                <img src="card32.jpg" alt="Card 32" class="card-small" data-family="divin" data-rarity="legendaire">
+                <img src="card33.jpg" alt="Card 33" class="card-small" data-family="mystique" data-rarity="mythique">
+                <img src="card34.jpg" alt="Card 34" class="card-small" data-family="mystique" data-rarity="mythique">
+                <img src="card35.jpg" alt="Card 35" class="card-small" data-family="mystique" data-rarity="mythique">
+                <img src="card36.jpg" alt="Card 36" class="card-small" data-family="mystique" data-rarity="mythique">
+                <img src="card37.png" alt="Card 37" class="card-small" data-family="secret" data-rarity="secrete">
+                <img src="card38.png" alt="Card 38" class="card-small" data-family="secret" data-rarity="secrete">
+                <img src="card39.png" alt="Card 39" class="card-small" data-family="secret" data-rarity="secrete">
+                <img src="card40.png" alt="Card 40" class="card-small" data-family="secret" data-rarity="secrete">
+                <img src="card41.png" alt="Card 41" class="card-small" data-family="voyance" data-rarity="temps">
+                <img src="card46.png" alt="Card 46" class="card-small" data-family="foudre" data-rarity="divin">
+                <img src="card47.png" alt="Card 47" class="card-small" data-family="soleil" data-rarity="cycle">
+                <img src="card42.png" alt="Card 42" class="card-small" data-family="seasons" data-rarity="eternel">
+                <img src="card43.png" alt="Card 43" class="card-small" data-family="seasons" data-rarity="eternel">
+                <img src="card44.png" alt="Card 44" class="card-small" data-family="seasons" data-rarity="eternel">
+                <img src="card45.png" alt="Card 45" class="card-small" data-family="seasons" data-rarity="eternel">
+                <img src="card48.png" alt="Card 46" class="card-small" data-family="chaos" data-rarity="apocalyptique">
+                <img src="card49.png" alt="Card 47" class="card-small" data-family="chaos" data-rarity="apocalyptique">
+                <img src="card50.png" alt="Card 48" class="card-small" data-family="chaos" data-rarity="apocalyptique">
+                <img src="card51.png" alt="Card 49" class="card-small" data-family="chaos" data-rarity="apocalyptique">
+                <img src="card52.png" alt="Card 46" class="card-small" data-family="smoke" data-rarity="surnaturel">
+                <img src="card53.png" alt="Card 47" class="card-small" data-family="smoke" data-rarity="surnaturel">
+                <img src="card54.png" alt="Card 48" class="card-small" data-family="smoke" data-rarity="surnaturel">
+                <img src="card55.png" alt="Card 49" class="card-small" data-family="smoke" data-rarity="surnaturel">
+                <img src="card56.png" alt="Card 49" class="card-small" data-family="smoke" data-rarity="surnaturel">
+                <img src="carte-lieu1.png" alt="Card 1.0" class="card-small" data-family="lieu" data-rarity="univers">
+                <img src="carte-lieu2.png" alt="Card 1.1" class="card-small" data-family="lieu" data-rarity="univers">
+                <img src="carte-lieu3.png" alt="Card 1.2" class="card-small" data-family="lieu" data-rarity="univers">
+                <img src="carte-lieu4.png" alt="Card 1.3" class="card-small" data-family="lieu" data-rarity="univers">
+                <img src="carte-lieu5.png" alt="Card 1.4" class="card-small" data-family="lieu" data-rarity="univers">
+                <img src="carte-lieu6.png" alt="Card 1.5" class="card-small" data-family="lieu" data-rarity="univers">
+                <img src="carte-lieu7.png" alt="Card 1.6" class="card-small" data-family="lieu" data-rarity="univers">
+                <img src="carte-lieu8.png" alt="Card 1.7" class="card-small" data-family="lieu" data-rarity="univers">
+                <img src="carte-lieu9.png" alt="Card 1.8" class="card-small" data-family="lieu" data-rarity="univers">
+                <img src="carte-lieu10.png" alt="Card 1.9" class="card-small" data-family="lieu" data-rarity="univers">
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
